@@ -1,4 +1,13 @@
 import { styled } from 'styled-components';
+import Javascript from '../asset/Javascript.svg';
+import React from '../asset/React.svg';
+import Typescript from '../asset/Typescript.svg';
+import HTML5 from '../asset/HTML5.svg';
+import CSS3 from '../asset/CSS3.svg';
+import Redux from '../asset/Redux.svg';
+import Vite from '../asset/Vite.svg';
+import Git from '../asset/Git.svg';
+import Amazon_S3 from '../asset/Amazon_S3.svg';
 
 const Stack = styled.ul`
   display: flex;
@@ -38,31 +47,31 @@ function Stackcom() {
     <>
       <Stack>
         <Stackli>
-          <Javascriptimg src="/Javascript.svg" alt="Javascript"></Javascriptimg>
+          <Javascriptimg src={Javascript} alt="Javascript"></Javascriptimg>
         </Stackli>
         <Stackli>
-          <Reactimg src="/React.svg" alt="React"></Reactimg>
+          <Reactimg src={React} alt="React"></Reactimg>
         </Stackli>
         <Stackli>
-          <Typescriptimg src="/Typescript.svg" alt="Typescript"></Typescriptimg>
+          <Typescriptimg src={Typescript} alt="Typescript"></Typescriptimg>
         </Stackli>
         <Stackli>
-          <Htmlimg src="/HTML5.svg" alt="HTML5"></Htmlimg>
+          <Htmlimg src={HTML5} alt="HTML5"></Htmlimg>
         </Stackli>
         <Stackli>
-          <Css3img src="/CSS3.svg" alt="CSS3"></Css3img>
+          <Css3img src={CSS3} alt="CSS3"></Css3img>
         </Stackli>
         <Stackli>
-          <Reduximg src="/Redux.svg" alt="Redux"></Reduximg>
+          <Reduximg src={Redux} alt="Redux"></Reduximg>
         </Stackli>
         <Stackli>
-          <Viteimg src="/Vite.svg" alt="Vite"></Viteimg>
+          <Viteimg src={Vite} alt="Vite"></Viteimg>
         </Stackli>
         <Stackli>
-          <Gitimg src="/Git.svg" alt="Git"></Gitimg>
+          <Gitimg src={Git} alt="Git"></Gitimg>
         </Stackli>
         <Stackli>
-          <Amazonimg src="/Amazon_S3.svg" alt="Amazon S3"></Amazonimg>
+          <Amazonimg src={Amazon_S3} alt="Amazon S3"></Amazonimg>
         </Stackli>
       </Stack>
     </>

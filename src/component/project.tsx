@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import gitcat from '../assets/gitcat.png';
+import gitcatpng from '../asset/gitcat.png';
 
 const Project = styled.div`
   margin-bottom: 1px;
@@ -29,7 +29,7 @@ function Projectcom() {
       <Projecttitle>
         <Paragraph>일요시네마</Paragraph>
         <a href="https://github.com/codestates-seb/seb45_main_001">
-          <Gitcat src="/gitcat.png" alt="깃헙링크"></Gitcat>
+          <Gitcat src={gitcatpng} alt="깃헙링크"></Gitcat>
         </a>
       </Projecttitle>
       <Paragraph>프로젝트 컴포넌트</Paragraph>
