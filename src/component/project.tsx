@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import gitcat from '../assets/gitcat.png';
 
 const Project = styled.div`
   margin-bottom: 1px;
