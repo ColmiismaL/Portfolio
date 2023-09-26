@@ -115,4 +115,4 @@ Error generating stack: `+o.message+`
   * {
     box-sizing: border-box;
   }
-`;function Z0(){return $.jsx(X0,{children:$.jsx(Dm,{children:$.jsx(ld,{path:"/",element:$.jsx(G0,{})})})})}const J0=ti.createRoot(document.getElementById("root"));J0.render($.jsx(Am,{children:$.jsx(Z0,{})}));
+`;function Z0(){return $.jsxs("div",{children:[$.jsx(X0,{}),$.jsx(Dm,{children:$.jsx(ld,{path:"/",element:$.jsx(G0,{})})})]})}const J0=ti.createRoot(document.getElementById("root"));J0.render($.jsx(Am,{children:$.jsx(Z0,{})}));
