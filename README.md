@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# 이력서
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 프론트엔드 개발자
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+- 📲 Mobile:  
+- 📧 E-mail:  
 
-### `npm start`
+- 😍 Github: [https://github.com/ColmiismaL](https://github.com/ColmiismaL)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React와 typescript 바탕으로 웹 개발이 가능한 프론트엔드 신입 개발자 서강의입니다.
 
-### `npm test`
+React,Redux toolkit을 사용한 앱 개발 및 배포 경험이 있습니다. 기존에 웹 개발에 대한 관심을 갖고 있었고 시각적 기능과 관련이 더 높은 프론트엔드 개발자가 되기 위해, 6개월 개발 부트캠프인 코드스테이츠를 수료했습니다. 수료 이후엔 부트캠프에서 다뤘던 작업들을 바탕으로 새로운 프로젝트나 기본적인 CS를 이해하기 위한 학습을 이어나가고 있습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+부트캠프 이전에는 게임메이커나 unity나 게임 자체 엔진을 사용해서 간단한 모딩을 취미 수준으로 만들고 있었습니다. 이러한 경험을 바탕으로 다른 언어나 기술에 접근함에 있어서 더 가볍게 그리고 진취적으로 접근할 수 있다고 생각됩니다.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Stacks
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**[ 프로그래밍 언어 ]**  Javascript, Typescript, HTML, CSS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**[ 프레임워크 & 라이브러리 ]**  React, Redux, Vite
 
-### `npm run eject`
+**[ Others ]** Git, AWS(S3), Postman, Notion
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Projects
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+코드스테이츠
+파이널 프로젝트
+(4인/4주)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 일요시네마
 
-## Learn More
+추천영화(예고편) 별점/댓글 프로젝트 / 넷플릭스나 와챠 미디어와 같은 리뷰 사이트와 유사한 형식 ( 📎  [배포](http://main-project-vite.s3-website.ap-northeast-2.amazonaws.com/) | [깃헙](https://github.com/codestates-seb/seb45_main_001)  )
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**[팀원, 프론트] javascript, typescript, React, Redux, Redux toolkit, Vite, AWS(S3), Styled-components, axios**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+- 헤더와 회원정보 관련 기능 및 검색 자동완성 기능
+- 초기엔 webpack을 썼으나 최종적으로는 Vite를 사용해서 S3로 배포
+- 상태관리는 Redux를 사용
+- meta나 strong 등을 사용해 기초적인 seo 최적화를 시도
+- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Education
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 코드스테이츠 (Code States) 프론트 엔드 과정
 
-### Making a Progressive Web App
+- Javascript 기반으로 프론트 엔드 과정 학습
+- React 및 Redux 등 여러 추가 기능들 학습
+- 20주 동안 매일 알고리즘 문제 풀이
+- 20주 동안 매일 강도 높은 과제 수행 및 페어 프로그래밍과 코드 리뷰 경험
+- 협업 프로젝트 2회 진행
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---

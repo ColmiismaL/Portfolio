@@ -28,6 +28,7 @@ const RightSection = styled.div`
   padding: 30px;
   background-color: #f9f9f9;
   box-sizing: border-box;
+  overflow-y: auto;
 `;
 
 const Title = styled.h1`
@@ -47,27 +48,67 @@ const Paragraph = styled.p`
   color: #333;
 `;
 
+const Stack = styled.ul`
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #333;
+`;
+
+const Stackli = styled.li`
+  font-size: 1em;
+  line-height: 1.6em;
+  color: #333;
+`;
+
+const Section = styled.section`
+  margin-bottom: 30px;
+`;
+
 function Mainpage() {
   return (
     <Container>
       <Card>
         <LeftSection>
-          <Title>홍길동</Title>
-          <Subtitle>웹 개발자</Subtitle>
+          <Title>서강의</Title>
+          <Subtitle>프론트엔드 개발자</Subtitle>
           <Paragraph>
-            안녕하세요! 저는 사용자 친화적인 웹사이트와 애플리케이션을 만들기
-            위해 항상 노력하고 있습니다.
+            React와 typescript 바탕으로 웹 개발이 가능한 프론트엔드 신입 개발자
+            서강의입니다. React,Redux toolkit을 사용한 앱 개발 및 배포 경험이
+            있습니다. 기존에 웹 개발에 대한 관심을 갖고 있었고 시각적 기능과
+            관련이 더 높은 프론트엔드 개발자가 되기 위해, 6개월 개발 부트캠프인
+            코드스테이츠를 수료했습니다. 수료 이후엔 부트캠프에서 다뤘던
+            작업들을 바탕으로 새로운 프로젝트나 기본적인 CS를 이해하기 위한
+            학습을 이어나가고 있습니다.
           </Paragraph>
         </LeftSection>
         <RightSection>
-          <Title>스택 & 기술</Title>
-          <Paragraph>
-            - JavaScript <br />
-            - React <br />
-            - Node.js <br />
-            - Express <br />
-            - MongoDB <br />
-          </Paragraph>
+          <Section>
+            <Title>스택 & 기술</Title>
+            <Stack>
+              <Stackli>JavaScript</Stackli>
+              <Stackli>React</Stackli>
+              <Stackli>Typescript</Stackli>
+              <Stackli>HTML</Stackli>
+              <Stackli>CSS</Stackli>
+              <Stackli>Redux</Stackli>
+              <Stackli>Vite</Stackli>
+              <Stackli>Git</Stackli>
+              <Stackli>AWS(S3)</Stackli>
+            </Stack>
+          </Section>
+          <Section>
+            <Title>프로젝트</Title>
+            <Paragraph>
+              <a href="https://github.com/codestates-seb/seb45_main_001">
+                깃헙링크
+              </a>
+            </Paragraph>
+            <Paragraph>프로젝트</Paragraph>
+          </Section>
+          <Section>
+            <Title>교육</Title>
+            <Paragraph>교육</Paragraph>
+          </Section>
         </RightSection>
       </Card>
     </Container>
