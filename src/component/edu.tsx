@@ -26,6 +26,7 @@ function Educom() {
   return (
     <Education>
       <Paragraph>교육 컴포넌트</Paragraph>
+      <Paragraph>코드스테이츠</Paragraph>
     </Education>
   );
 }

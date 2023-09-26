@@ -1,8 +1,15 @@
-import { styled } from 'styled-components';
+import styled, { css } from 'styled-components';
 import Stackcom from '../component/stack';
 import Projectcom from '../component/project';
 import Educom from '../component/edu';
 import Introcom from '../component/int';
+import { useDispatch, useSelector } from 'react-redux';
+import { DataState } from '../slice/authslice';
+import Project1 from '../component/pro1more';
+import { useState, useEffect } from 'react';
+import InstructionPopup from '../component/instructionpopup';
+import 'prismjs';
+import 'prismjs/themes/prism-okaidia.css';
 
 const Container = styled.div`
   display: flex;
@@ -14,8 +21,8 @@ const Container = styled.div`
 
 const Card = styled.div`
   display: flex;
-  width: 1280px;
-  height: 720px;
+  width: 70%;
+  height: 85vh;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,13 +30,14 @@ const Card = styled.div`
 `;
 
 const LeftSection = styled.div`
-  width: 28%;
+  width: 25%;
   padding: 30px;
   box-sizing: border-box;
+  overflow-y: auto;
 `;
 
 const RightSection = styled.div`
-  width: 72%;
+  width: 75%;
   padding: 30px;
   background-color: #f9f9f9;
   box-sizing: border-box;
@@ -63,8 +71,20 @@ const Gitcat = styled.img`
 `;
 
 function Mainpage() {
+  const isProject1 = useSelector(
+    (state: { data: DataState }) => state.data.isProject1,
+  );
+
+  const [showPopup, setShowPopup] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPopup(false), 6000); // 5초 후에 팝업을 숨김
+    return () => clearTimeout(timer); // 컴포넌트가 언마운트되면 타이머를 정리
+  }, []);
+
   return (
     <Container>
+      {showPopup && <InstructionPopup />}
       <Card>
         <LeftSection>
           <Title>서강의</Title>
@@ -72,18 +92,24 @@ function Mainpage() {
           <Introcom></Introcom>
         </LeftSection>
         <RightSection>
-          <Section>
-            <Subtitle>스택 & 기술</Subtitle>
-            <Stackcom></Stackcom>
-          </Section>
-          <Section>
-            <Subtitle>프로젝트</Subtitle>
-            <Projectcom></Projectcom>
-          </Section>
-          <Section>
-            <Subtitle>교육</Subtitle>
-            <Educom></Educom>
-          </Section>
+          {isProject1 ? (
+            <Project1 />
+          ) : (
+            <>
+              <Section>
+                <Subtitle>스택 & 기술</Subtitle>
+                <Stackcom></Stackcom>
+              </Section>
+              <Section>
+                <Subtitle>프로젝트</Subtitle>
+                <Projectcom></Projectcom>
+              </Section>
+              <Section>
+                <Subtitle>교육</Subtitle>
+                <Educom></Educom>
+              </Section>
+            </>
+          )}
         </RightSection>
       </Card>
     </Container>
