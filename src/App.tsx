@@ -10,11 +10,12 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <GlobalStyle>
+    <div>
+      <GlobalStyle />
       <Routes>
         <Route path="/" element={<Mainpage />} />
       </Routes>
-    </GlobalStyle>
+    </div>
   );
 }
 
