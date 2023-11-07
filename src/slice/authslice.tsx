@@ -5,6 +5,9 @@ export interface DataState {
   globalname: string;
   globalmail: string;
   isProject1: boolean;
+  isProject2: boolean;
+  isProject3: boolean;
+  activeProject: number | null;
   isMagnifierClicked: boolean;
   searchData: {
     movieNm: string;
@@ -20,6 +23,9 @@ const initialState: DataState = {
   globalname: '비로그인',
   globalmail: 'none@nope.com',
   isProject1: false,
+  isProject2: false,
+  isProject3: false,
+  activeProject: null,
   isMagnifierClicked: false,
   query: '',
   searchData: [
@@ -47,8 +53,17 @@ export const DataState = createSlice({
     updateQuery: (state, action: PayloadAction<string>) => {
       state.query = action.payload;
     },
+    updateActiveProject: (state, action: PayloadAction<number | null>) => {
+      state.activeProject = action.payload;
+    },
     updateProject1: (state, action: PayloadAction<boolean>) => {
       state.isProject1 = action.payload;
+    },
+    updateProject2: (state, action: PayloadAction<boolean>) => {
+      state.isProject2 = action.payload;
+    },
+    updateProject3: (state, action: PayloadAction<boolean>) => {
+      state.isProject3 = action.payload;
     },
     updateMagnifier: (state, action: PayloadAction<boolean>) => {
       state.isMagnifierClicked = action.payload;
@@ -67,7 +82,10 @@ export const DataState = createSlice({
 export const {
   updateName,
   updateMail,
+  updateActiveProject,
   updateProject1,
+  updateProject2,
+  updateProject3,
   updateMagnifier,
   updateQuery,
   updateSearchData,

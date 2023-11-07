@@ -3,7 +3,11 @@ import gitcatpng from '../asset/gitcat.png';
 import linkpng from '../asset/link.png';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { updateProject1 } from '../slice/authslice';
+import {
+  updateProject1,
+  updateProject2,
+  updateActiveProject,
+} from '../slice/authslice';
 
 const Project = styled.div``;
 
@@ -130,8 +134,8 @@ function Projectcom() {
     }
   };
 
-  const handleButtonClick = () => {
-    dispatch(updateProject1(true));
+  const handleButtonClick = (projectNumber: number) => {
+    dispatch(updateActiveProject(projectNumber));
   };
 
   return (
@@ -157,9 +161,32 @@ function Projectcom() {
               <Gitcat src={linkpng} alt="배포링크"></Gitcat>
             </a>
           </Projecttitle>
-          <Paragraph>로그인, 회원가입 및 회원정보 검색 기능 담당</Paragraph>
+          <Paragraph>
+            &nbsp;로그인, 회원가입 및 회원정보 검색 기능 담당
+          </Paragraph>
         </Projectwrap2>
-        <Projectbutton onClick={handleButtonClick}>자세히 보기</Projectbutton>
+        <Projectbutton onClick={() => handleButtonClick(1)}>
+          이슈 보기
+        </Projectbutton>
+      </Projectwrap>
+      <Projectwrap>
+        <Projectwrap2>
+          <Projecttitle>
+            <Paragraph>Nextjs 써보기</Paragraph>
+            <a href="https://github.com/ColmiismaL/solofullproject">
+              <Gitcat src={gitcatpng} alt="깃헙링크"></Gitcat>
+            </a>
+            <a href="/">
+              <Gitcat src={linkpng} alt="배포링크"></Gitcat>
+            </a>
+          </Projecttitle>
+          <Paragraph>
+            &nbsp;넥스트 js를 사용하여 서버와 프론트 간의 연결 공부
+          </Paragraph>
+        </Projectwrap2>
+        <Projectbutton onClick={() => handleButtonClick(2)}>
+          이슈 보기
+        </Projectbutton>
       </Projectwrap>
     </Project>
   );

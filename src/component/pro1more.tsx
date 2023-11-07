@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 import { useDispatch } from 'react-redux';
-import { updateProject1 } from '../slice/authslice';
+import { updateActiveProject } from '../slice/authslice';
 import Code from './highlight';
 
 const Project = styled.div``;
@@ -54,7 +54,7 @@ const Projectbutton = styled.button`
 function Project1() {
   const dispatch = useDispatch();
   const handleButtonClick = () => {
-    dispatch(updateProject1(false));
+    dispatch(updateActiveProject(null));
   };
 
   return (

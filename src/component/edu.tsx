@@ -25,8 +25,9 @@ const Projecttitle = styled.div`
 function Educom() {
   return (
     <Education>
-      <Paragraph>교육 컴포넌트</Paragraph>
-      <Paragraph>코드스테이츠</Paragraph>
+      <Paragraph>남서울대학교 공간조형디자인전공</Paragraph>
+      <Paragraph></Paragraph>
+      <Paragraph>코드스테이츠 프론트엔드 45기</Paragraph>
     </Education>
   );
 }

@@ -6,10 +6,12 @@ import Introcom from '../component/int';
 import { useDispatch, useSelector } from 'react-redux';
 import { DataState } from '../slice/authslice';
 import Project1 from '../component/pro1more';
+import Project2 from '../component/pro2more';
 import { useState, useEffect } from 'react';
 import InstructionPopup from '../component/instructionpopup';
 import 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
+import { updateActiveProject } from '../slice/authslice';
 
 const Container = styled.div`
   display: flex;
@@ -71,11 +73,11 @@ const Gitcat = styled.img`
 `;
 
 function Mainpage() {
-  const isProject1 = useSelector(
-    (state: { data: DataState }) => state.data.isProject1,
-  );
-
   const [showPopup, setShowPopup] = useState(true);
+
+  const activeProject = useSelector(
+    (state: { data: DataState }) => state.data.activeProject,
+  );
 
   useEffect(() => {
     const timer = setTimeout(() => setShowPopup(false), 6000); // 5초 후에 팝업을 숨김
@@ -92,24 +94,28 @@ function Mainpage() {
           <Introcom></Introcom>
         </LeftSection>
         <RightSection>
-          {isProject1 ? (
-            <Project1 />
-          ) : (
-            <>
-              <Section>
-                <Subtitle>스택 & 기술</Subtitle>
-                <Stackcom></Stackcom>
-              </Section>
-              <Section>
-                <Subtitle>프로젝트</Subtitle>
-                <Projectcom></Projectcom>
-              </Section>
-              <Section>
-                <Subtitle>교육</Subtitle>
-                <Educom></Educom>
-              </Section>
-            </>
-          )}
+          {
+            {
+              null: (
+                <>
+                  <Section>
+                    <Subtitle>스택 & 기술</Subtitle>
+                    <Stackcom />
+                  </Section>
+                  <Section>
+                    <Subtitle>프로젝트</Subtitle>
+                    <Projectcom />
+                  </Section>
+                  <Section>
+                    <Subtitle>교육</Subtitle>
+                    <Educom />
+                  </Section>
+                </>
+              ),
+              1: <Project1 />,
+              2: <Project2 />,
+            }[activeProject || 'null'] // 현재 활성화된 프로젝트에 따라 렌더링할 컴포넌트를 선택합니다.
+          }
         </RightSection>
       </Card>
     </Container>
