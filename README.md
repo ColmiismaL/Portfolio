@@ -1,64 +1,65 @@
-# 이력서
+# 서강의 포트폴리오
 
-### 프론트엔드 개발자
+React와 TypeScript로 만든 개인 개발 포트폴리오입니다. 프로젝트 기여 내용, 사용 기술, 교육 경험과 GitHub 링크를 제공합니다.
 
----
+## 실행
 
-- 📲 Mobile:  
-- 📧 E-mail:  
+Node.js 24 LTS와 npm을 사용합니다. 명령은 저장소 루트에서 실행하세요.
 
-- 😍 Github: [https://github.com/ColmiismaL](https://github.com/ColmiismaL)
+```sh
+npm ci
+npm run dev
+```
 
----
+`package-lock.json`을 유일한 잠금 파일로 관리합니다. 패키지를 바꿀 때 이 파일도 함께 커밋하세요.
 
-React와 typescript 바탕으로 웹 개발이 가능한 프론트엔드 신입 개발자 서강의입니다.
+## 검증
 
-React,Redux toolkit을 사용한 앱 개발 및 배포 경험이 있습니다. 기존에 웹 개발에 대한 관심을 갖고 있었고 시각적 기능과 관련이 더 높은 프론트엔드 개발자가 되기 위해, 6개월 개발 부트캠프인 코드스테이츠를 수료했습니다. 수료 이후엔 부트캠프에서 다뤘던 작업들을 바탕으로 새로운 프로젝트나 기본적인 CS를 이해하기 위한 학습을 이어나가고 있습니다.
+```sh
+npm run format:check
+npm run lint
+npm run typecheck
+npm run build
+npx playwright install chromium
+npm test
+npm audit --audit-level=high
+```
 
-부트캠프 이전에는 게임메이커나 unity나 게임 자체 엔진을 사용해서 간단한 모딩을 취미 수준으로 만들고 있었습니다. 이러한 경험을 바탕으로 다른 언어나 기술에 접근함에 있어서 더 가볍게 그리고 진취적으로 접근할 수 있다고 생각됩니다.
+Playwright는 빌드 결과를 대상으로 데스크톱·모바일 표시, 내비게이션, 320px 화면의 가로 넘침, 접근성, 동작 감소 설정을 검사합니다. 외부 사이트의 현재 가동 여부는 자동 테스트에서 확인하지 않습니다.
 
----
+## 구조
 
-## Stacks
+- `src/content.ts`: 소개와 프로젝트·기술 데이터
+- `src/App.tsx`: 의미 있는 HTML로 구성한 페이지
+- `src/App.module.css`: 컴포넌트 스타일과 반응형 배치
+- `src/index.css`: 전역 스타일
+- `tests/portfolio.spec.ts`: 실제 브라우저 검사
+- `.github/workflows/ci.yml`: PR과 main 변경 시 자동 검사
+- `.github/dependabot.yml`: 의존성과 Actions 업데이트 제안
 
-**[ 프로그래밍 언어 ]**  Javascript, Typescript, HTML, CSS
+## 콘텐츠 수정
 
-**[ 프레임워크 & 라이브러리 ]**  React, Redux, Vite
+내용은 기존 README와 화면에 있던 사실을 바탕으로 옮겼습니다. 프로젝트 이미지는 실제 화면 캡처가 아닌 CSS 그래픽입니다. 경력·성과·연락처를 공개하기 전에 최신 정보로 확인하세요.
 
-**[ Others ]** Git, AWS(S3), Postman, Notion
+프로젝트는 `src/content.ts`의 `Project` 타입에 맞춰 추가합니다. 공개 가능한 실제 스크린샷과 확인된 문제 해결 사례를 추가하면 상세 내용을 보강할 수 있습니다. 기존 팀 프로젝트의 HTTP 배포 주소는 현재 운영 여부가 확인되지 않아 화면에 노출하지 않았습니다.
 
----
+## 배포
 
-## Projects
+```sh
+npm run build
+npm run preview
+```
 
-코드스테이츠
-파이널 프로젝트
-(4인/4주)
+정적 결과물은 `dist/`에 생성됩니다. `preview`는 로컬 확인용입니다. 이 저장소에는 자동 배포를 설정하지 않았으며, 기존 배포 위치도 확인되지 않았습니다.
 
-### 일요시네마
+Vite의 상대 경로 설정으로 정적 파일을 하위 경로에서도 제공할 수 있게 했습니다. 실제 호스팅의 HTTPS, 경로, 캐시 설정과 링크는 배포 환경에서 따로 확인해야 합니다. 공개 URL 확정 후 canonical URL과 소셜 공유 이미지를 추가하세요.
 
-추천영화(예고편) 별점/댓글 프로젝트 / 넷플릭스나 와챠 미디어와 같은 리뷰 사이트와 유사한 형식 ( 📎  [배포](http://main-project-vite.s3-website.ap-northeast-2.amazonaws.com/) | [깃헙](https://github.com/codestates-seb/seb45_main_001)  )
+## 개편 내용
 
-**[팀원, 프론트] javascript, typescript, React, Redux, Redux toolkit, Vite, AWS(S3), Styled-components, axios**
+- Create React App에서 Vite로 전환하고 실행·빌드 경로 통일
+- 사용하지 않는 Redux, Router, Styled-components 및 기존 도구 의존성 제거
+- TypeScript·ESLint·Prettier 설정 분리 및 npm 잠금 파일 재생성
+- 모바일 레이아웃, 본문 바로가기, 키보드 포커스, 한국어 메타데이터 추가
+- 기존 저장소 이력 보존, 별도 브랜치에서 변경 검토
 
----
-
-- 헤더와 회원정보 관련 기능 및 검색 자동완성 기능
-- 초기엔 webpack을 썼으나 최종적으로는 Vite를 사용해서 S3로 배포
-- 상태관리는 Redux를 사용
-- meta나 strong 등을 사용해 기초적인 seo 최적화를 시도
-- 
-
----
-
-## Education
-
-### 코드스테이츠 (Code States) 프론트 엔드 과정
-
-- Javascript 기반으로 프론트 엔드 과정 학습
-- React 및 Redux 등 여러 추가 기능들 학습
-- 20주 동안 매일 알고리즘 문제 풀이
-- 20주 동안 매일 강도 높은 과제 수행 및 페어 프로그래밍과 코드 리뷰 경험
-- 협업 프로젝트 2회 진행
-
----
+2023년 원문 이력서는 `docs/resume-2023.md`에 보존했습니다.
