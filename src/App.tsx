@@ -1,10 +1,13 @@
 import styles from './App.module.css';
 import { profile, projects, skills } from './content';
 
+// 화살표는 링크의 장식이다. 화면 읽기 도구에는 링크 문구만 전달한다.
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
+// 한 페이지 안의 이동은 기본 앵커를 사용한다. 섹션 ID는 메뉴·바로가기·테스트와 연결된다.
+// 추후 디자인을 바꾸더라도 ID와 의미 있는 제목 구조는 유지한다.
 export default function App() {
   return (
     <>

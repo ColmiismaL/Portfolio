@@ -1,3 +1,4 @@
+// 내용은 화면 스타일과 분리한다. 후속 디자인 변경 시 이력과 프로젝트 정보는 그대로 재사용한다.
 export interface Project {
   id: string;
   number: string;
@@ -10,6 +11,7 @@ export interface Project {
   repositoryUrl: string;
 }
 
+// 기존 이력서에 확인된 내용만 사용한다. 경력·연락처 변경은 본인 확인 후 반영한다.
 export const profile = {
   name: '서강의',
   handle: 'ColmiismaL',

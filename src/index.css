@@ -45,6 +45,7 @@ a:focus-visible {
   background: #cee896;
   color: #15372e;
 }
+/* 운영체제의 동작 감소 설정을 존중한다. 이후 효과를 추가해도 이 규칙을 유지한다. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
