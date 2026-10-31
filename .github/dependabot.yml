@@ -6,9 +6,16 @@ updates:
       interval: weekly
     open-pull-requests-limit: 5
     groups:
+      react:
+        patterns: [react, react-dom, '@types/react', '@types/react-dom']
+        update-types: [minor, patch]
       development:
         dependency-type: development
         update-types: [minor, patch]
+    ignore:
+      # Node.js 24 실행 환경과 타입 정의의 주요 버전을 맞춘다.
+      - dependency-name: '@types/node'
+        versions: ['>=25']
   - package-ecosystem: github-actions
     directory: /
     schedule:
